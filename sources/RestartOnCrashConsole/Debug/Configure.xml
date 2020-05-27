@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ConfigEntity>  
+  <!--被守护程序-->
+  <Apps>
+    <!--配置说明
+        name 必须为应用程序名称
+        path 为守护程序相对路径或者绝对路径
+        isRun 如需启动设置为true,否则为false
+        waitTime 当前程序启动后等待时间，如redis启动后等待五秒执行下一程序
+    -->
+	<App name="Hubei212Recv" path ="..\Apps\Hubei212Recv\Hubei212Recv.exe" isRun="true" waitTime="1"/>  
+	<App name="NetAssist-4.3.25" path ="..\Apps\NetAssist-4.3.25.exe" isRun="true" waitTime="1"/> 
+	<App name="HBCityZlw" path ="E:\SoftDevelop\CPlus\VCProjets\RestartOnCrashConsole\Apps\HBCityZlw.exe" isRun="true" waitTime="5"/> 
+	<App name="HNCityZlw" path ="E:\SoftDevelop\CPlus\VCProjets\RestartOnCrashConsole\Apps\HNCityZlw.exe" isRun="true" waitTime="5"/> 
+  </Apps>
+</ConfigEntity>

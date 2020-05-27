@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ConfigEntity>  
+  <!--被守护程序-->
+  <Apps>
+    <!--配置说明
+        name 必须为应用程序名称
+        path 为守护程序相对路径
+        isRun 如需启动设置为true,否则为false
+        waitTime 当前程序启动后等待时间，如redis启动后等待五秒执行下一程序
+    -->
+	<App name="Hubei212Recv" path ="..\Apps\Hubei212Recv\Hubei212Recv.exe" isRun="true" waitTime="1"/>  
+	<App name="NetAssist-4.3.25" path ="..\Apps\NetAssist-4.3.25.exe" isRun="true" waitTime="1"/> 
+	<App name="HBCityZlw" path ="E:\Apps\HBCityZlw.exe" isRun="true" waitTime="5"/> 
+	<App name="HNCityZlw" path ="E:\Apps\HNCityZlw.exe" isRun="true" waitTime="5"/> 
+    <!--UPS程序 不依赖于其他程序可以优先启动-->
+    <App name="UPSPowerCheck" path ="..\UPS\UPSPowerCheck.exe" isRun="false" waitTime="1"/>  
+    
+    <!--IV通讯-->
+    <!--需要运行IV、联动告警业务需要启动Server程序，且必须在前置端启动之前启动-->
+    <App name="Server" path ="..\TCPSuit\Server.exe" isRun="false" waitTime="1"/>
+    <!--有联动告警业务时需要启动Client程序，需在Server之后启动-->
+    <App name="Client" path ="..\TCPSuit\Client.exe" isRun="false" waitTime="1"/>
+    
+    <!--前置端程序-->    
+    <App name="IV" path ="..\IRV\IV.exe" isRun="false" waitTime="1"/>
+    <App name="RV" path ="..\IRV\RV.exe" isRun="false" waitTime="1"/>
+    <App name="Atisafe.Front.FrontSystem" path ="..\FrontSystem\Atisafe.Front.FrontSystem.exe" isRun="false" waitTime="1"/>
+    
+    <!--服务端程序-->
+	  <App name="redis-server" path ="..\Redis-x64-3.0.501\Start_Redis_Server.exe" isRun="false" waitTime="5"/>
+  </Apps>
+
+  <!--守护程序检测间隔 单位:秒-->
+  <SpanTime>5</SpanTime>
+  <!--是否启用心跳功能 true/false-->
+  <Heartbeat>true</Heartbeat>  
+  <!--Http Server Addr-->
+  <HttpServerAddr>http://127.0.0.1:30510/</HttpServerAddr>
+</ConfigEntity>
