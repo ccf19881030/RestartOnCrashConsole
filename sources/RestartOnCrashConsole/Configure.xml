@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ConfigEntity>  
   <!--被守护程序-->
   <Apps>
@@ -10,8 +10,8 @@
     -->
 	<App name="Hubei212Recv" path ="..\Apps\Hubei212Recv\Hubei212Recv.exe" isRun="true" waitTime="1"/>  
 	<App name="NetAssist-4.3.25" path ="..\Apps\NetAssist-4.3.25.exe" isRun="true" waitTime="1"/> 
-	<App name="HBCityZlw" path ="E:\Apps\HBCityZlw.exe" isRun="true" waitTime="5"/> 
-	<App name="HNCityZlw" path ="E:\Apps\HNCityZlw.exe" isRun="true" waitTime="5"/> 
+	<App name="HBCityZlw" path ="E:\SoftDevelop\CPlus\VCProjets\RestartOnCrashConsole\Apps\HBCityZlw.exe" isRun="true" waitTime="5"/> 
+	<App name="HNCityZlw" path ="E:\SoftDevelop\CPlus\VCProjets\RestartOnCrashConsole\Apps\HNCityZlw.exe" isRun="true" waitTime="5"/> 
     <!--UPS程序 不依赖于其他程序可以优先启动-->
     <App name="UPSPowerCheck" path ="..\UPS\UPSPowerCheck.exe" isRun="false" waitTime="1"/>  
     
